@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⛳️Playable⛳️Media⛳️</title>
+    <style>
+        :root {
+            --input_rot: -6deg;
+        }
+
+        body {
+            background-color: honeydew;
+            border: none;
+            font-weight: 900;
+            text-align: center;
+            top: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            font-weight: 300;
+            font-size: xx-large;
+            text-align: center;
+            rotate: var(--input_rot);
+            animation-name: rotate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+
+        }
+
+        @keyframes rotate {
+            from {
+                rotate: -5deg
+            }
+
+            to {
+                rotate: -10deg
+            }
+        }
+
+        img {
+            position: absolute;
+            left: 90%;
+            top: 90%;
+            width: 20vh;
+            height: auto;
+        }
+
+        img:hover {
+            box-shadow: wheat 0 0 3px 3px;
+        }
+
+        .links {
+            font-style: italic;
+        }
+    </style>
+    <script>
+        var r = document.querySelector(':root');
+
+        //input field, change text
+        var week = 1
+        var i = 0
+        const WEEKS =
+            [
+                ["arrays", "start", "at", "one"],
+                ["hello", "this is", "briefing / w brin", "what that?", "its GAMER news", "and not gamers", "...", "i give brief", "you talk", ":) ", "wait!", "theres more", "you give news", "to me!", "c u nxt week"]
+            ]
+        function gofwd() {
+            var inpt = document.getElementById("inpt");
+
+            inpt.value = WEEKS[week][i]
+            console.log(inpt)
+            i++
+
+        }
+    </script>
+</head>
+
+<body>
+    <input id="inpt" type="text" id="fname" name="fname" value="Playable Media">
+    <br><br>
+    <img id="cld" src="cloud.png" alt="" sizes="30%" onclick="gofwd()">
+
+    <div id="links">
+
+    </div>
+</body>
+
+</html>
